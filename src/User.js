@@ -23,7 +23,7 @@ const User = () => {
 
       try{
          
-        const response = await axios.post("http://localhost:5000/deleteItem",{
+        const response = await axios.post("https://react3-frontend.vercel.app/deleteItem",{
           id:id
         })
         console.log(response , "<===== delete response");
@@ -52,7 +52,7 @@ const User = () => {
 
             console.log(response1 , "<=== image upload")
              
-            const response = await axios.post("http://localhost:5000/registerItem",{
+            const response = await axios.post("https://react3-frontend.vercel.app/registerItem",{
                 name:item.name,
                 price:item.price,
                 image:response1.data.data.url,
@@ -89,7 +89,7 @@ const User = () => {
 
              try{
                
-              const response = await axios.get("http://localhost:5000/getItems");
+              const response = await axios.get("https://react3-frontend.vercel.app/getItems");
               console.log(response,"get item response")
 
               setItemList(response.data)

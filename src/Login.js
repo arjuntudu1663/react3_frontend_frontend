@@ -27,7 +27,7 @@ const Login = () => {
        
       try{
          
-        const response = await axios.post("http://localhost:5000/login",{
+        const response = await axios.post("https://react3-frontend.vercel.app/login",{
           name:loginVal.name,
           password:loginVal.password
         });
@@ -49,7 +49,7 @@ const Login = () => {
         
       try{
          
-        const response = await axios.post("http://localhost:5000/register",registerVal);
+        const response = await axios.post("https://react3-frontend.vercel.app/register",registerVal);
         console.log(response);
         
         if(response.statusText === 'OK'){

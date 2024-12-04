@@ -56,7 +56,7 @@ const Home = () => {
          
         try{
            
-          const response = await axios.get("http://localhost:5000/getItems");
+          const response = await axios.get("https://react3-frontend.vercel.app/getItems");
           console.log(response," <==== getItems response")
           setItems(response.data)
 
